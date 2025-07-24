@@ -29,7 +29,7 @@ DHK Cars is a responsive and SEO-friendly web application built with Spring Boot
 
 ### 🏠 Homepage
 
-![Homepage Screenshot](https://raw.githubusercontent.com/Umar9696/Preowned-Cars/main/screenshots/Homepage.png)
+![Available Cars](https://github.com/Umar9696/Preowned-Cars/blob/master/screenshots/Availablecars.png?raw=true)
 
 ### 🚗 Car Details Page
 
