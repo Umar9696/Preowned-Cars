@@ -41,7 +41,9 @@ DHK Cars is a responsive and SEO-friendly web application built with Spring Boot
 Preowned-cars/
 ├── src/
 │ ├── main/
-│ │ ├── java/com/dhkcars/
+│ │ ├── java/
+│ │ │ └── com/
+│ │ │ └── dhkcars/
 │ │ │ ├── controller/
 │ │ │ ├── model/
 │ │ │ ├── repository/
