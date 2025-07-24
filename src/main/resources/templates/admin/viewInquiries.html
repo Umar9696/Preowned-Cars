@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>View Inquiries</title></head>
+<body>
+    <h2>Customer Inquiries</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th><th>Email</th><th>Phone</th><th>Message</th><th>Submitted At</th>
+        </tr>
+        <tr th:each="inq : ${inquiries}">
+            <td th:text="${inq.name}"></td>
+            <td th:text="${inq.email}"></td>
+            <td th:text="${inq.phone}"></td>
+            <td th:text="${inq.message}"></td>
+            <td th:text="${inq.submittedAt}"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.car-brands-logos {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+}
+
+.logo-slider {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: fit-content;
+  animation: scrollLogos 25s linear infinite;
+}
+
+.logo-slider img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-slider img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

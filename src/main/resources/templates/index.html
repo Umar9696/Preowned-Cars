@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>DHK CARS - Home</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/header.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">DHK CARS</a>
+
+    <!-- TOGGLER BUTTON for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- NAV LINKS -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/available}">Available Cars</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/sold}">Sold Cars</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/admin/login}">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HEADER -->
+<header class="hero-section text-white position-relative">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <div class="row align-items-center py-5 text-center text-md-start">
+      <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+        <div class="logo-img-wrapper">
+          <img src="/images/Dlogo.jpeg" alt="DHK Logo" class="logo-img" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1 class="display-4 fw-bold animate-slide-in">DHK CARS</h1>
+        <h4 class="text-secondary animate-fade-in">A Name You Can Trust</h4>
+        <p class="mt-3 fs-5 animate-fade-in-delay">
+          Explore our wide collection of pre-owned cars in excellent condition. We offer loan facilities, complete documentation assistance, and our quality guarantee. You can buy, sell, or exchange your car with confidence.
+        </p>
+        <a href="/available" class="btn btn-light btn-lg mt-3 shadow-sm">Browse Cars</a>
+
+        <!-- Logo Slider -->
+        <div class="car-brands-logos mt-5">
+          <div class="logo-slider">
+          	<img src="/images/logos/hyundaiN.png" alt="Hyundai" class="brand-logo" />
+            <img src="/images/logos/marutiN.png" alt="Maruti" class="brand-logo" />
+            <img src="/images/logos/toyota1.png" alt="Toyota" class="brand-logo" />
+            <img src="/images/logos/hondaN.png" alt="Honda" class="brand-logo" />
+            <img src="/images/logos/mg1.png" alt="MG" class="brand-logo" />
+            <img src="/images/logos/ford.png" alt="Ford" class="brand-logo" />
+            <img src="/images/logos/kiaNN.png" alt="Kia" class="brand-logo" />
+            <img src="/images/logos/Volkswagen.png" alt="Skoda" class="brand-logo" />
+            <img src="/images/logos/skoda.png" alt="Volkswagen" class="brand-logo" />
+            
+            <img src="/images/logos/mahindraN.png" alt="Mahindra" class="brand-logo" />
+            <img src="/images/logos/renault.png" alt="Renault" class="brand-logo" />
+            <img src="/images/logos/tataN.png" alt="Tata" class="brand-logo" />
+            <img src="/images/logos/bmwNN.png" alt="bmw" class="brand-logo" />
+            <img src="/images/logos/benz.png" alt="benz" class="brand-logo" />
+            <img src="/images/logos/audi.png" alt="audi" class="brand-logo" />
+            <img src="/images/logos/hyundaiN.png" alt="Hyundai" class="brand-logo" />
+            <img src="/images/logos/marutiN.png" alt="Maruti" class="brand-logo" />
+            <img src="/images/logos/toyota1.png" alt="Toyota" class="brand-logo" />
+            <img src="/images/logos/hondaN.png" alt="Honda" class="brand-logo" />
+            <img src="/images/logos/mg1.png" alt="MG" class="brand-logo" />
+            <img src="/images/logos/ford.png" alt="Ford" class="brand-logo" />
+            <img src="/images/logos/kiaNN.png" alt="Kia" class="brand-logo" />
+            <img src="/images/logos/mahindraN.png" alt="Mahindra" class="brand-logo" />
+            <img src="/images/logos/renault.png" alt="Renault" class="brand-logo" />
+            <img src="/images/logos/tataN.png" alt="Tata" class="brand-logo" />
+            <img src="/images/logos/bmwNN.png" alt="bmw" class="brand-logo" />
+            <img src="/images/logos/benz.png" alt="benz" class="brand-logo" />
+            <img src="/images/logos/audi.png" alt="audi" class="brand-logo" />
+            
+          </div>
+        </div>
+        <!-- End Logo Slider -->
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- AVAILABLE CARS -->
+<section class="available-cars-section py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="m-0 text-white">Available Cars</h2>
+      <a href="/sold" class="btn btn-outline-light">View Sold Cars</a>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-6 mb-4" th:each="car : ${cars}">
+        <a th:href="@{'/car/' + ${car.id}}" class="text-decoration-none">
+          <div class="card h-100 available-car-card shadow-sm">
+            <div class="ribbon">New Arrival</div>
+            <img th:src="@{${car.imageUrl}}" class="card-img-top" alt="Car Image" loading="lazy">
+            <div class="card-body text-center">
+              <h5 class="card-title" th:text="${car.name} + ' - ' + ${car.model}"></h5>
+              <p class="card-text" th:text="${car.description}"></p>
+              <div class="price-box" th:text="'₹ ' + ${car.price}"></div>
+            </div>
+          </div>
+        </a>
+      </div> <!-- closes col-md-4 -->
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose-us py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 text-white">Why Choose Us</h2>
+
+    <!-- Carousel for mobile -->
+    <div id="whyCarousel" class="carousel slide d-lg-none" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="why-card text-center p-4">
+            <i class="bi bi-patch-check-fill text-warning fs-1 mb-3"></i>
+            <h5 class="fw-bold">Verified Quality</h5>
+            <p>Every car is inspected and guaranteed for top condition.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="why-card text-center p-4">
+            <i class="bi bi-wallet2 text-info fs-1 mb-3"></i>
+            <h5 class="fw-bold">Affordable Pricing</h5>
+            <p>No hidden charges. Transparent, fair pricing always.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="why-card text-center p-4">
+            <i class="bi bi-person-heart text-danger fs-1 mb-3"></i>
+            <h5 class="fw-bold">Customer Satisfaction</h5>
+            <p>Reputation built on honesty, service, and trust.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="why-card text-center p-4">
+            <i class="bi bi-bank text-success fs-1 mb-3"></i>
+            <h5 class="fw-bold">Easy Financing</h5>
+            <p>Loan assistance with flexible EMIs via trusted banks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid layout for desktop -->
+    <div class="row text-center d-none d-lg-flex mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="why-card p-4">
+          <i class="bi bi-patch-check-fill text-warning fs-1 mb-3"></i>
+          <h5 class="fw-bold">Verified Quality</h5>
+          <p>Every car is inspected and guaranteed for top condition.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="why-card p-4">
+          <i class="bi bi-wallet2 text-info fs-1 mb-3"></i>
+          <h5 class="fw-bold">Affordable Pricing</h5>
+          <p>No hidden charges. Transparent, fair pricing always.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="why-card p-4">
+          <i class="bi bi-person-heart text-danger fs-1 mb-3"></i>
+          <h5 class="fw-bold">Customer Satisfaction</h5>
+          <p>Reputation built on honesty, service, and trust.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="why-card p-4">
+          <i class="bi bi-bank text-success fs-1 mb-3"></i>
+          <h5 class="fw-bold">Easy Financing</h5>
+          <p>Loan assistance with flexible EMIs via trusted banks.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- HAPPY CUSTOMERS -->
+<section class="happy-customers-section py-5">
+  <div class="container">
+    <h2 class="text-center text-white mb-4">Happy Customers</h2>
+    <div id="happyCustomersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner text-center">
+
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <img src="/images/carousel/caro1.jpg" class="customer-carousel-img" alt="Customer 1">
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="/images/carousel/caro2.jpg" class="customer-carousel-img" alt="Customer 2">
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <img src="/images/carousel/caro3.jpg" class="customer-carousel-img" alt="Customer 3">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#happyCustomersCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#happyCustomersCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- CONTACT FORM -->
+<section id="contact" class="py-5" style="background-color: #f1f1f1;">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact US</h2>
+
+    <!-- Success Message -->
+    <div th:if="${message}" class="alert alert-success text-center" role="alert">
+      <span th:text="${message}"></span>
+    </div>
+
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-6">
+        <form method="post" th:action="@{/inquiry}" th:object="${inquiry}" onsubmit="showSpinner()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" th:field="*{name}" required />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" th:field="*{phone}" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" th:field="*{email}" required />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" th:field="*{message}" rows="4" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4" id="submitBtn">
+              <span id="btnText">Send Message</span>
+              <span id="spinner" class="spinner-border spinner-border-sm d-none ms-2" role="status" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    <div class="col-lg-5 d-flex align-items-center">
+  <div class="w-100">
+    <div class="ratio ratio-16x9 rounded shadow-sm custom-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3956097.6313994336!2d75.9023622!3d14.4630518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba257f81282b1d%3A0xc239b62ef8220209!2sDHK%20Cars!5e0!3m2!1sen!2sin!4v1752842023394!5m2!1sen!2sin" 
+        style="border:0;" allowfullscreen="" 
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Spinner Script -->
+  <script>
+    function showSpinner() {
+      document.getElementById("submitBtn").disabled = true;
+      document.getElementById("btnText").textContent = "Sending...";
+      document.getElementById("spinner").classList.remove("d-none");
+    }
+  </script>
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+<section class="py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <h2 class="text-center mb-4">About Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <p class="lead text-center">
+          <strong>DHK CARS</strong> Your trusted destination for quality pre-owned cars.
+        </p>
+        <p class="text-center">
+          We handpick every car, check every detail, and verify every document. From your first car to your next upgrade, count on us for a smooth, honest, and budget-friendly experience.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white p-4 text-center">
+  <div>© DHK CARS 2025</div>
+</footer>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success')) {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+<script>
+  function showSpinner() {
+    // Disable the button
+    document.getElementById("submitBtn").disabled = true;
+    // Hide button text
+    document.getElementById("btnText").textContent = "Sending...";
+    // Show spinner
+    document.getElementById("spinner").classList.remove("d-none");
+  }
+</script>
+<!-- Spinner Overlay -->
+<!-- Spinner Overlay -->
+<div id="spinner-overlay" 
+     style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(255,255,255,0.8); z-index:9999; display:none; align-items:center; justify-content:center;">
+  <img src="/images/giphy.gif" alt="Loading..." style="width: 150px;" />
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function () {
+      document.getElementById('spinner-overlay').style.display = 'flex';
+    });
+  });
+</script>
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Animate elements on scroll
+  const faders = document.querySelectorAll('.animate-fade-in, .animate-slide-in, .animate-fade-in-delay');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in-up");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate__animated", "fade-in-up");
+          entry.target.style.opacity = 1;
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+<a href="https://wa.me/919742709696" class="whatsapp-float" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+
+
+</body>
+</html>

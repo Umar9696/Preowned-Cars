@@ -1,0 +1,13 @@
+package com.preowned;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class PreownedCarsApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

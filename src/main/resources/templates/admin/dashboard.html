@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Admin Dashboard</title></head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <ul>
+        <li><a th:href="@{/admin/add-car}">Add New Car</a></li>
+        <li><a th:href="@{/admin/view-cars}">Manage Cars</a></li>
+        <li><a th:href="@{/admin/view-inquiries}">View Inquiries</a></li>
+        <li><a th:href="@{/logout}">Logout</a></li>
+    </ul>
+</body>
+</html>
